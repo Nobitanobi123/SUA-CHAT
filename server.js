@@ -3,7 +3,7 @@ const app = express()
 const http = require('http').createServer(app)
 const hostname = '0.0.0.0';
 
-const PORT =  3000;
+const PORT = process.env.PORT || 3000
 
 http.listen(PORT, () => {
     console.log(`Server running at http://${hostname}:${PORT}/`);
